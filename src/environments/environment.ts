@@ -2,8 +2,12 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import { firebaseConfig } from '../../firebaseconfig'
+
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: firebaseConfig
 };
 
 /*
