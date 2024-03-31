@@ -8,6 +8,7 @@ import { AppComponent } from './app/app.component';
 import { environment } from './environments/environment';
 import { provideServiceWorker } from '@angular/service-worker';
 import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
 
 if (environment.production) {
   enableProdMode();

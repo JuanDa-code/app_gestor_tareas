@@ -1,0 +1,26 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar [color]="color ? color : 'primary'">
+
+    <ion-buttons *ngIf="backButton" slot="start">
+      <!-- ==== Cerrar Modal ==== -->
+      <ion-button *ngIf="isModal">
+        Hola
+      </ion-button>
+
+      <!-- ==== Back Button ==== -->
+      <ion-back-button [defaultHref]="backButton"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title *ngIf="title" [ngClass]="{'ion-text-center': centerTitle}">{{ title }}</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="setTheme(false)" *ngIf="darkMode.value">
+        Moon
+      </ion-button>
+
+      <ion-button (click)="setTheme(true)" *ngIf="!darkMode.value">
+        Dark
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

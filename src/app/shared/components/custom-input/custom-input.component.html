@@ -1,0 +1,10 @@
+<ion-item class="ion-margin-vertical">
+  <ion-label position="floating">{{ label }}</ion-label>
+  <ion-input debounce="500" [autocomplete]="autocomplete" [type]="type" [formControl]="control"></ion-input>
+
+  <ion-buttons *ngIf="isPassword" slot="end">
+    <ion-button (click)="showOrHidePassword()">
+      O
+    </ion-button>
+  </ion-buttons>
+</ion-item>
